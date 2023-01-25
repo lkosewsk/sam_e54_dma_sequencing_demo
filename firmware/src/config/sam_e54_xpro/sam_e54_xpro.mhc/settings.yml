@@ -1,0 +1,13 @@
+configName: sam_e54_xpro
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../../..
+processor: ATSAME54P20A
+projectName: ''
+settings:
+  PackageFilter: x2c;core;mc_apps_sam_rh707;mc_apps_sam_e7x_s7x_v7x;usb;motor_control;core_apps_sam_d5x_e5x;mc_apps_sam_c2x;bsp;quick_docs;dev_packs;csp;harmony-services;mc_apps_sam_rh71;mc_apps_sam_d5x_e5x;mc_apps_pic32mk;csp_apps_sam_d5x_e5x;mc_apps_pic32cm_mc;Devices
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: ./dev_packs/arm/CMSIS/5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: ./dev_packs/Microchip/SAME54_DFP/3.7.122/atdf/ATSAME54P20A.atdf
