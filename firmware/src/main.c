@@ -60,8 +60,7 @@ float input_voltage;
 
 void adc_sram_dma_callback(DMAC_TRANSFER_EVENT event, uintptr_t contextHandle)
 {
-	if (event == DMAC_TRANSFER_EVENT_COMPLETE)
-    {
+	if (event == DMAC_TRANSFER_EVENT_COMPLETE) {
         adc_dma_done[contextHandle] = true;
     }
 }
@@ -69,8 +68,7 @@ void adc_sram_dma_callback(DMAC_TRANSFER_EVENT event, uintptr_t contextHandle)
 bool ever_got_here = false;
 void dma2_seq_cb(DMAC_TRANSFER_EVENT event, uintptr_t contextHandle)
 {
-    if (event == DMAC_TRANSFER_EVENT_COMPLETE)
-    {
+    if (event == DMAC_TRANSFER_EVENT_COMPLETE) {
         ever_got_here = true;
     }
 }
@@ -128,8 +126,8 @@ int main ( void )
             
             reset_adc0_dma();
 		}
-        if (adc_dma_done[1])
-        {
+        if (adc_dma_done[1]) {
+            adc_dma_done[1] = false;
             printf("These values should be similar but are not :(: { 0x%03x, 0x%03x, 0x%03x }\r\n",
                     adc1_res[0], adc1_res[1], adc1_res[2]);
             printf("Also, did ADC1_SEQ ever complete? %d\r\n", ever_got_here);
